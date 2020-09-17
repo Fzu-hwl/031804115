@@ -6,6 +6,7 @@ from math import sqrt
 import jieba.analyse
 from functools import reduce
 import time
+import sys
 class Similarity():
 
     def __init__(self, target1, target2, topK=1000):
@@ -57,9 +58,9 @@ class Similarity():
         B = sqrt(reduce(lambda x, y: x + y, map(lambda x: x * x, self.vdict2.values())))
         return sum / (A * B)
 if __name__ == '__main__':
-    orignal=input("原文件:")
-    nexttxt=input("对比文件:")
-    output=input("输入结果文件：")
+    orignal=sys.argv[1]
+    nexttxt=sys.argv[2]
+    output=sys.argv[3]
     f1 = open(orignal, "r", encoding='UTF-8')
     f2 = open(nexttxt, "r", encoding='UTF-8')
     t1 = f1.read()
@@ -71,7 +72,10 @@ if __name__ == '__main__':
     result = s.similar()
     result=round(result,2)
     result=str(result)
-    f=open(output,"w")
-    f.write(result+"\n")
-    f.close()
-    print("结果已存入文件夹中")
+    try:
+        f=open(output,"w")
+        f.write(result+"\n")
+        f.close()
+        print("结果已存入文件夹中")
+    except IOError:
+        print("Error: 没有找到文件或读取文件失败")
