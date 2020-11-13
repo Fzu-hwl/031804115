@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 头部导航栏 -->
+    <div class="header w">
+        <!-- logo部分 -->
+        <div class="logo">
+            <img src="images/logo.png" />
+        </div>
+        <!-- 导航栏部分 nav -->
+        <div class="nav">
+            <ul>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">帮助</a></li>
+                <li><a href="#">登入</a></li>
+                <li><a href="#">注册</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 核心功能板块 -->
+    <div class="core w">
+        <div class="box">
+            <ul>
+                <li class="up left">
+                    <a href="#"><img src="images/1.png"></a>
+                </li>
+                <li class="up">
+                    <a href="#"><img src="images/2.png"></a>
+                </li>
+                <li class="down left">
+                    <a href="#"><img src="images/3.png"></a>
+                </li>
+                <li class="down">
+                    <a href="#"><img src="images/4.png"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 尾部foot板块 -->
+    <div class="foot w">
+        <span>
+            <em><img src="images/logo.png" /></em>
+            <p>酷转——让你的办公如此简单</p>
+        </span>
+        <span>
+            <p class="tel">联系方式：</p>
+            <div class="phonenum">
+                <h4>客服联系方式：123456789</h4></br>
+                <h4>技术热线：123456789</h4>
+            </div>
+        </span>
+        <span>
+            <ul class="suggest">
+                <li><a href="#">意见反馈</a></li></br>
+                <li><a href="#">常见问题</a></li></br>
+                <li><a href="#">帮助</a></li></br>
+            </ul>
+        </span>
+
+    </div>
+
+
+</body>
+
+</html>
